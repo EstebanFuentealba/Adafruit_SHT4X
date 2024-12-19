@@ -79,7 +79,7 @@ public:
     @param parent A pointer to the SHT4x class */
   Adafruit_SHT4x_Humidity(Adafruit_SHT4x *parent) { _theSHT4x = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x0401;
@@ -98,7 +98,7 @@ public:
   Adafruit_SHT4x_Temp(Adafruit_SHT4x *parent) { _theSHT4x = parent; }
 
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x0400;
